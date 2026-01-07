@@ -1,8 +1,26 @@
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+
+//pages
+import Home from "./pages/Home";
+import About from "./pages/About";
+
 function App() {
   return (
-    <>
-      <div>lms</div>
-    </>
+    <BrowserRouter>
+      <header>
+        <nav>
+          <h1>CourseRouter</h1>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="about">About</NavLink>
+        </nav>
+      </header>
+      <main>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
 

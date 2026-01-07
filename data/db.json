@@ -1,0 +1,39 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Mastering React Router",
+      "duration": "4 hours",
+      "level": "Intermediate",
+      "instructor": "Shaun Pelling"
+    },
+    {
+      "id": 2,
+      "title": "Advanced CSS Layouts",
+      "duration": "6 hours",
+      "level": "Beginner",
+      "instructor": "Jane Doe"
+    },
+    {
+      "id": 3,
+      "title": "Node.js for Beginners",
+      "duration": "8 hours",
+      "level": "Beginner",
+      "instructor": "John Smith"
+    },
+    {
+      "id": 4,
+      "title": "Python for Data Science",
+      "duration": "12 hours",
+      "level": "Advanced",
+      "instructor": "Alan Turing"
+    },
+    {
+      "id": 5,
+      "title": "UX Design Fundamentals",
+      "duration": "5 hours",
+      "level": "Intermediate",
+      "instructor": "Don Norman"
+    }
+  ]
+}
