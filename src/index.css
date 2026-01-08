@@ -103,8 +103,25 @@ form label span {
   margin-bottom: 10px;
 }
 
-/* careers list */
-
+/* courses list */
+.courses > a {
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-decoration: none;
+}
+.courses > a:hover p {
+  color: var(--primary);
+}
+.courses p {
+  margin: 0;
+}
+.courses > a p:last-child {
+  font-size: 0.8em;
+  color: #bbb;
+}
 /* careers details */
 
 /* breadcrumbs */
