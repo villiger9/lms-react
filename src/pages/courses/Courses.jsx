@@ -19,5 +19,9 @@ export default function Courses() {
 export const coursesLoader = async () => {
   const res = await fetch("http://localhost:4000/courses/");
 
+  if (!res.ok) {
+    throw Error("could not fetch the courses");
+  }
+
   return res.json();
 };

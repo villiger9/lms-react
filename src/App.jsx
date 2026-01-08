@@ -15,6 +15,7 @@ import Courses, { coursesLoader } from "./pages/courses/Courses";
 import CourseDetails, {
   courseDetailsLoader,
 } from "./pages/courses/CourseDetails";
+import CoursesError from "./pages/courses/CoursesError";
 
 //layouts
 import RootLayout from "./layouts/RootLayout";
@@ -31,7 +32,11 @@ const router = createBrowserRouter(
         <Route path="contact" element={<Contact />} />
       </Route>
 
-      <Route path="courses" element={<CoursesLayout />}>
+      <Route
+        path="courses"
+        element={<CoursesLayout />}
+        errorElement={<CoursesError />}
+      >
         <Route index element={<Courses />} loader={coursesLoader} />
         <Route
           path=":id"

@@ -26,5 +26,10 @@ export default function CourseDetails() {
 export const courseDetailsLoader = async ({ params }) => {
   const { id } = params;
   const res = await fetch("http://localhost:4000/courses/" + id);
+
+  if (!res.ok) {
+    throw Error("could not find that course");
+  }
+
   return res.json();
 };
