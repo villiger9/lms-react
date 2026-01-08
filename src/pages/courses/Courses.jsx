@@ -6,7 +6,7 @@ export default function Courses() {
   return (
     <div className="courses">
       {courses.map((course) => (
-        <Link to="/" key={course.id}>
+        <Link to={course.id.toString()} key={course.id}>
           <p>{course.title}</p>
           <p>Taught by {course.instructor}</p>
         </Link>
@@ -17,7 +17,7 @@ export default function Courses() {
 
 //loader function
 export const coursesLoader = async () => {
-  const res = await fetch("http://localhost:4000/courses");
+  const res = await fetch("http://localhost:4000/courses/");
 
   return res.json();
 };

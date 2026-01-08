@@ -10,13 +10,16 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Faq from "./pages/help/Faq";
 import Contact from "./pages/help/Contact";
+import NotFound from "./NotFound";
+import Courses, { coursesLoader } from "./pages/courses/Courses";
+import CourseDetails, {
+  courseDetailsLoader,
+} from "./pages/courses/CourseDetails";
 
 //layouts
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
-import NotFound from "./NotFound";
 import CoursesLayout from "./layouts/CoursesLayout";
-import Courses, { coursesLoader } from "./pages/courses/Courses";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +33,11 @@ const router = createBrowserRouter(
 
       <Route path="courses" element={<CoursesLayout />}>
         <Route index element={<Courses />} loader={coursesLoader} />
+        <Route
+          path=":id"
+          element={<CourseDetails />}
+          loader={courseDetailsLoader}
+        />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Route>

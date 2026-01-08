@@ -8,6 +8,7 @@ export default function RootLayout() {
           <h1>CourseRouter</h1>
           <NavLink to="/">Home</NavLink>
           <NavLink to="about">About</NavLink>
+          <NavLink to="courses">Courses</NavLink>
         </nav>
       </header>
       <main>
